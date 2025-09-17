@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Hu-VD-0z6">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Furniture Detail View Controller-->
+        <scene sceneID="LUK-fr-74O">
+            <objects>
+                <viewController id="vtX-9G-kBV" customClass="FurnitureDetailViewController" customModule="HomeFurniture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mMr-N1-4xv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b89-Pu-Iaf">
+                                <rect key="frame" x="20" y="555" width="353" height="30"/>
+                                <state key="normal" title="Choose Photo"/>
+                                <connections>
+                                    <action selector="choosePhotoButtonTapped:" destination="vtX-9G-kBV" eventType="touchUpInside" id="fp3-Xx-zgx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2Y-wa-bME">
+                                <rect key="frame" x="20" y="631" width="87.333333333333329" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Furniture" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DT2-C3-5jB">
+                                <rect key="frame" x="19.999999999999993" y="593" width="96.333333333333314" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryj-k3-SFE">
+                                <rect key="frame" x="0.0" y="735" width="393" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="gGh-5F-MjP">
+                                        <connections>
+                                            <action selector="actionButtonTapped:" destination="vtX-9G-kBV" id="670-LU-7BK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1KE-yh-JhT">
+                                <rect key="frame" x="20" y="182" width="353" height="353"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1KE-yh-JhT" secondAttribute="height" multiplier="1:1" id="IQW-pT-t07"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZdM-rP-PVv"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b89-Pu-Iaf" firstAttribute="top" secondItem="1KE-yh-JhT" secondAttribute="bottom" constant="20" id="1xp-gX-nwI"/>
+                            <constraint firstItem="ZdM-rP-PVv" firstAttribute="trailing" secondItem="1KE-yh-JhT" secondAttribute="trailing" constant="20" id="2ak-tQ-Y3N"/>
+                            <constraint firstItem="1KE-yh-JhT" firstAttribute="leading" secondItem="ZdM-rP-PVv" secondAttribute="leading" constant="20" id="8IC-te-2y8"/>
+                            <constraint firstItem="Ryj-k3-SFE" firstAttribute="bottom" secondItem="ZdM-rP-PVv" secondAttribute="bottom" id="Ds5-wG-UTn"/>
+                            <constraint firstItem="ZdM-rP-PVv" firstAttribute="trailing" secondItem="Ryj-k3-SFE" secondAttribute="trailing" id="PuG-y3-yph"/>
+                            <constraint firstItem="a2Y-wa-bME" firstAttribute="top" secondItem="DT2-C3-5jB" secondAttribute="bottom" constant="8" id="QJV-bY-807"/>
+                            <constraint firstItem="1KE-yh-JhT" firstAttribute="top" secondItem="ZdM-rP-PVv" secondAttribute="top" constant="20" id="SPo-jx-ddm"/>
+                            <constraint firstItem="a2Y-wa-bME" firstAttribute="leading" secondItem="ZdM-rP-PVv" secondAttribute="leading" constant="20" id="Xkg-T1-wLX"/>
+                            <constraint firstItem="ZdM-rP-PVv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="a2Y-wa-bME" secondAttribute="trailing" constant="20" id="atc-MI-GNA"/>
+                            <constraint firstItem="DT2-C3-5jB" firstAttribute="top" secondItem="b89-Pu-Iaf" secondAttribute="bottom" constant="8" id="b9m-Jk-A2b"/>
+                            <constraint firstItem="Ryj-k3-SFE" firstAttribute="leading" secondItem="ZdM-rP-PVv" secondAttribute="leading" id="e8j-ZB-YWn"/>
+                            <constraint firstItem="ZdM-rP-PVv" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DT2-C3-5jB" secondAttribute="trailing" constant="20" id="evE-mW-tfU"/>
+                            <constraint firstItem="b89-Pu-Iaf" firstAttribute="leading" secondItem="ZdM-rP-PVv" secondAttribute="leading" constant="20" id="smb-v0-GRU"/>
+                            <constraint firstItem="ZdM-rP-PVv" firstAttribute="trailing" secondItem="b89-Pu-Iaf" secondAttribute="trailing" constant="20" id="wCE-aF-Xsu"/>
+                            <constraint firstItem="DT2-C3-5jB" firstAttribute="leading" secondItem="ZdM-rP-PVv" secondAttribute="leading" constant="20" id="zoh-gY-Xsl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="YOh-N0-xlW"/>
+                    <connections>
+                        <outlet property="choosePhotoButton" destination="b89-Pu-Iaf" id="i3U-x7-w9k"/>
+                        <outlet property="furnitureDescriptionLabel" destination="a2Y-wa-bME" id="G8C-hw-u6R"/>
+                        <outlet property="furnitureTitleLabel" destination="DT2-C3-5jB" id="uB5-fX-ajU"/>
+                        <outlet property="photoImageView" destination="1KE-yh-JhT" id="2HK-FM-j3O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxA-zg-QLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="120.53571428571428"/>
+        </scene>
+        <!--Home Furniture-->
+        <scene sceneID="XGI-iz-FOO">
+            <objects>
+                <tableViewController id="K5g-IO-osG" customClass="FurnitureTableViewController" customModule="HomeFurniture" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="N8D-Jf-RXL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FurnitureCell" textLabel="okM-Tt-xHJ" style="IBUITableViewCellStyleDefault" id="7u7-kE-H4X">
+                                <rect key="frame" x="0.0" y="38" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7u7-kE-H4X" id="LiJ-Sk-dKn">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="okM-Tt-xHJ">
+                                            <rect key="frame" x="20" y="0.0" width="353" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vtX-9G-kBV" kind="show" identifier="" destinationCreationSelector="showFurnitureDetail:sender:" id="fRf-bD-pCT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="K5g-IO-osG" id="aNi-fr-Xdn"/>
+                            <outlet property="delegate" destination="K5g-IO-osG" id="kNj-pi-Vmu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home Furniture" id="dQd-Xf-vzT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="waY-k7-cbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dVy-Uy-bzZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Hu-VD-0z6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="JvO-nJ-CNd">
+                        <rect key="frame" x="0.0" y="118" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K5g-IO-osG" kind="relationship" relationship="rootViewController" id="AHL-ur-bF3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uub-v2-Orj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
